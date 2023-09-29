@@ -41,6 +41,9 @@ img {
     align-items: center;
     flex-shrink: 0;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-navigation {
@@ -58,7 +61,6 @@ img {
 .header-nav-list {
     display: flex;
     gap: 40px;
-    position: relative;
 }
 .header-nav-item:first-child .header-nav-link {
     color: #404BBF;
@@ -71,8 +73,8 @@ img {
     position: absolute;
     background-color: #404BBF;
     border-radius: 2px;
-    bottom: 0px;
-    left: -1px;
+    bottom: -1px;
+    left: 0;
     flex-shrink: 0;
 }
 
@@ -105,6 +107,8 @@ text-transform: uppercase;
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
+    position: relative;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-link:hover,
 .header-nav-link:focus {
@@ -122,6 +126,7 @@ text-transform: uppercase;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-address-link:hover,
@@ -150,7 +155,7 @@ text-transform: uppercase;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    min-width: 1440px;
+    max-width: 1440px;
     margin: 0;
 }
 
@@ -188,6 +193,7 @@ text-transform: uppercase;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .business-btn:hover,
@@ -255,6 +261,8 @@ text-transform: uppercase;
     flex-shrink: 0;
     border: 1px solid #8E8F99;
     background-color: #F4F4FD;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 /* ============================== */
@@ -326,6 +334,9 @@ margin-bottom: 8px;
 }
 
 .team-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     fill: #F4F4FD;
     background-color: #4D5AE5;
     border-radius: 50%;
@@ -396,9 +407,10 @@ margin-bottom: 8px;
 .portfolio-container-text {
     position: absolute;
     top: 0;
-    padding: 40px 32px 164px 32px;
+    padding: 40px 32px;
     background-color: #4D5AE5;
     height: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     transform: translateY(100%);
@@ -411,7 +423,7 @@ margin-bottom: 8px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    
+   
 }
 
 
@@ -455,7 +467,8 @@ background-color: #2E2F42;
 
 .footer-container {
 display: flex;
-align-items: center;  
+align-items: baseline;  
+margin-right: 120px;
 }
 
 .footer-logo {
@@ -502,9 +515,10 @@ gap: 16px;
 }
 
 .footer-link {
-fill:#ffffff;
 background-color: #4D5AE5;
-display: inline-block;
+display: flex;
+align-items: center;
+justify-content: center;
 width: 40px;
 height: 40px;
 padding: 8px;
@@ -519,6 +533,9 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     background-color: #31D0AA;
 }
 
+.footer-soc-vector {
+    fill: #ffffff;
+}
 .soc-text {
     color: #ffffff;
     font-size: 16px;
