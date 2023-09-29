@@ -151,7 +151,7 @@ text-transform: uppercase;
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
         ),
-    url(/images/peopleoffice.jpg);
+    url(../images/peopleoffice.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
